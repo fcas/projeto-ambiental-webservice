@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Enactor xmlns="http://www.contexttoolkit.org/ctk" name="temperature-Enactor">
+
+	<InWidget  href="temperature-widget-input.xml" />
+	<OutWidget href="informa-widget-output.xml" />
+	
+	<OutcomeName>temperature</OutcomeName>
+	
+	<Reference name="temperature">
+		<Query name="temperature">
+			( NOT
+				(LESS temperature -274)
+			)
+		</Query>
+		<Outcome outAttribute="temperature">area+";"+"temperatureMonitor;"+temperature</Outcome>
+		<ServiceInput service="InformaService" function="temperatureMonitor">
+			<Attribute name="temperature" />
+		</ServiceInput>
+	</Reference>
+	
+	<Reference name="beautifulWeather">
+		<Query name="beautifulWeather">
+			( AND
+                            (GREATER temperature 16)
+                            (LESS temperature 27)
+                            (GREATER humidity 60)
+                            (GREATER windSpeed 25)
+			)
+		</Query>
+		<Outcome outAttribute="temperature">area+";"+"beautifulWeatherMonitor"</Outcome>
+		<ServiceInput service="InformaService" function="beautifulWeatherMonitor">
+			<Attribute name="temperature" />
+		</ServiceInput>
+	</Reference>
+	
+	<Reference name="fire">
+		<Query name="fire">
+			(AND
+				(LESS temperature -274)
+				(EQUAL isFire true)
+			)
+		</Query>
+		<Outcome outAttribute="temperature">area+";"+"isFireMonitor"</Outcome>
+		<ServiceInput service="InformaService" function="isFireMonitor">
+			<Attribute name="temperature" />
+		</ServiceInput>
+	</Reference>
+		
+	<Reference name="hotDry">
+		<Query name="hotDry">
+			(  AND
+				(GREATER temperature 35)
+				(LESS humidity 25)
+			)
+		</Query>
+		<Outcome outAttribute="temperature">area+";"+"hotDryMonitor"</Outcome>
+		<ServiceInput service="InformaService" function="hotDryMonitor">
+			<Attribute name="temperature"/>
+		</ServiceInput>
+	</Reference>
+
+</Enactor>

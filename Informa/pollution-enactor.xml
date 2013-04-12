@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Enactor xmlns="http://www.contexttoolkit.org/ctk" name="pollutionEnactor">
+
+	<InWidget  href="pollution-widget-input.xml" />
+	<OutWidget href="informa-widget-output.xml" />
+	
+	<OutcomeName>pollution</OutcomeName>
+	
+	<!--
+            Avisa sobre o nível de poluição na area.	 
+	-->
+	<Reference name="PollutionBoa">
+		<Query name="PollutionBoa">
+			( AND
+				(GREATER_EQUAL indexPollution 0)
+				(LESS indexPollution 50)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"pollutionMonitor;"+"BOA"</Outcome>
+		<ServiceInput service="informaService" function="pollutionMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference>
+	
+	<Reference name="pollutionRegular">
+		<Query name="pollutionRegular">
+			(AND
+				(GREATER indexPollution 50)
+				(LESS indexPollution 101)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"pollutionMonitor;"+"REGULAR"</Outcome>
+		<ServiceInput service="informaService" function="pollutionMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference>
+	
+	<Reference name="pollutionInadequada">
+		<Query name="pollutionInadequada">
+			(AND
+				(GREATER indexPollution 100)
+				(LESS indexPollution 201)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"pollutionMonitor;"+"INADEQUADA"</Outcome>
+		<ServiceInput service="informaService" function="pollutionMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference>
+	
+	<Reference name="pollutionMa">
+		<Query name="pollutionMa">
+			(AND
+				(GREATER indexPollution 200)
+				(LESS indexPollution 301)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"pollutionMonitor;"+"MÁ"</Outcome>
+		<ServiceInput service="informaService" function="pollutionMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference>
+	
+	<Reference name="pollutionPessima">
+		<Query name="pollutionPessima">
+			( NOT
+				(LESS indexPollution 300)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"pollutionMonitor;"+"PÉSSIMA"</Outcome>
+		<ServiceInput service="informaService" function="pollutionMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference> 
+	
+	<Reference name="trafficFlow">
+		<Query name="trafficFlow">
+			( AND
+				(GREATER indexPollution 300)
+				(GREATER vehicleFlow 200)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"pollutionMonitor;"+"TRAFEGO"</Outcome>
+		<ServiceInput service="informaService" function="pollutionMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference> 
+	
+        <!--
+            Avisa sobre previsão de chuva.
+	-->
+        <Reference name="willRain">
+		<Query name="willRain">
+			( NOT
+				(LESS willRain 70)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"willRainMonitor"</Outcome>
+		<ServiceInput service="informaService" function="willRainMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+        </Reference> 
+
+	<!--
+            Avisa sobre chuva acida: (poluição de uma área indo para outra[ou não] que vai chover).
+	-->
+	<Reference name="acidRainHere">
+		<Query name="acidRainHere">
+			( AND
+				(GREATER indexPollution 300)
+				(LESS windSpeed 20)
+				(GREATER willRain 70)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"acidRainMonitor;"+"AQUI"</Outcome>
+		<ServiceInput service="informaService" function="acidRainMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference> 
+	
+        
+	<Reference name="acidRainOther">
+		<Query name="acidRainOther">
+			( AND
+				(GREATER indexPollution 300)
+				(GREATER windSpeed 30)
+				(GREATER willRain 70)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"acidRainMonitor;"+"OUTRO"</Outcome>
+		<ServiceInput service="informaService" function="acidRainMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference> 
+
+	<!--
+            Avisa sobre chuva acida: (poluição de uma área indo para outra[ou não] que vai chover).
+	-->
+	
+	<Reference name="noise">
+		<Query name="noise">
+			( NOT
+				(LESS noise 55)
+			)
+		</Query>
+		<Outcome outAttribute="pollution">area+";"+"noiseMonitor;"+noise</Outcome>
+		<ServiceInput service="informaService" function="noiseMonitor">
+			<Attribute name="pollution" />
+		</ServiceInput>
+	</Reference> 
+	
+</Enactor>
