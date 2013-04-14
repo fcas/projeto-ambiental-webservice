@@ -4,5 +4,6 @@
 		<Attribute name="pollution" type="string"/>
 		<Attribute name="temperature" type="string"/>
 		<Attribute name="dump" type="string"/>
+                <Attribute name="area" type="int"/>
 	</Attributes>	
 </Widget>

@@ -13,7 +13,7 @@ public interface AtualizaMonitor {
     public void atualizaNivelPoluicao(Integer area, String levelPollution);
     public void atualizaFluxoVeiculos(Integer area);
     public void atualizaProbabilidaDeChuva(Integer area);
-    public void atualizaChuvaAcida(Integer area, String localAcidRain);
+    public void atualizaChuvaAcida(Integer area, String localAcidRain, String directionWind);
     public void atualizaQuantidadeRuido(Integer area, Integer noise);
     
     //atualiza icones sobre temperatura
@@ -23,8 +23,8 @@ public interface AtualizaMonitor {
     public void atualizaClimaQuenteESeco(Integer area, boolean hotDry);
     
     //atualizar icones sobre o lixo
-    public void atualizaQuantidadeLixo(Integer area, String trash);
-    public void atualizaAgenteProximo(Integer area, String agentNearName);
+    public void atualizaQuantidadeLixo(Integer area, String content);
+    public void atualizaAgenteProximo(Integer area, String status, String agentNearName);
     
     
 }

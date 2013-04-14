@@ -29,7 +29,7 @@ import javax.ws.rs.core.MediaType;
 public class WebServiceMonitoramentoAmbiental {
     
     private InstanciaWidget widget;
-    private final AtualizarWidgets atualizarWidgets = new ConcreteAtualizarWidgets();
+    private final AtualizarWidgets atualizarWidgets = ConcreteAtualizarWidgets.getInstance();
     
     private MonitorCidade monitorCidade = MonitorCidade.getInstance();
 
@@ -42,12 +42,12 @@ public class WebServiceMonitoramentoAmbiental {
     }
     
     
-//    @GET
-//    @Path("/iniciar")
-//    public String iniciar(){
-//        monitorCidade.setVisible(true);
-//        return "iniciando";
-//    }
+    @GET
+    @Path("/iniciar")
+    public String iniciar(){
+        monitorCidade.setVisible(true);
+        return "iniciando";
+    }
 
     //=====PollutionWidget=====
     @POST

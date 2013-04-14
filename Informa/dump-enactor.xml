@@ -8,8 +8,8 @@
 	
 	<Reference name="empty">
 		<Query name="empty">
-			(NOT
-				(DIFFERENT content 0)
+			(
+				EQUAL content 0
 			)
 		</Query>
 		<Outcome outAttribute="dump">area+";"+"trashMonitor;"+"VAZIA"</Outcome>
@@ -22,7 +22,7 @@
 		<Query name="filling">
 			(AND
 				(GREATER content 0)
-				(LESS content 250)
+				(LESS content 225)
 			)
 		</Query>
 		<Outcome outAttribute="dump">area+";"+"trashMonitor;"+"ENCHENDO"</Outcome>
@@ -35,8 +35,8 @@
         
         	<Reference name="flood">
 		<Query name="flood">
-			(NOT
-				(DIFFERENT content 250)
+			(
+                            EQUAL content 250
 			)
 		</Query>
 		<Outcome outAttribute="dump">area+";"+"trashMonitor;"+"CHEIA"</Outcome>
@@ -47,11 +47,11 @@
         
 	<Reference name="limit">
 		<Query name="limit">
-			(NOT
-				(DIFFERENT content 225)
+			(
+                            EQUAL content 225
 			)
 		</Query>
-		<Outcome outAttribute="dump">area+";"+"trashGathering;"+"LIMITE"</Outcome>
+		<Outcome outAttribute="dump">area+";"+"trashGathering;"+"LIMITE;"+agentNearName</Outcome>
 		<ServiceInput service="informaService" function="trashGathering">
 			<Attribute name="dump" />
 		</ServiceInput>
@@ -59,8 +59,8 @@
         
        	<Reference name="floodGathering">
 		<Query name="floodGathering">
-			(NOT
-				(DIFFERENT content 250)
+			(
+                            EQUAL content 250
 			)
 		</Query>
 		<Outcome outAttribute="dump">area+";"+"trashGathering;"+"CHEIA;"+agentNearName</Outcome>

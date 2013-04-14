@@ -127,7 +127,7 @@
 				(GREATER willRain 70)
 			)
 		</Query>
-		<Outcome outAttribute="pollution">area+";"+"acidRainMonitor;"+"OUTRO"</Outcome>
+		<Outcome outAttribute="pollution">area+";"+"acidRainMonitor;"+"OUTRO;"+directionWind</Outcome>
 		<ServiceInput service="informaService" function="acidRainMonitor">
 			<Attribute name="pollution" />
 		</ServiceInput>

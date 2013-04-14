@@ -12,7 +12,18 @@ public class ConcreteAtualizarWidgets implements AtualizarWidgets{
    private HashMap<Integer, AtualizarPollutionWidget> pollutionWidgets = new HashMap<Integer, AtualizarPollutionWidget>();
    private HashMap<Integer, AtualizarTemperatureWidget> temperatureWidgets = new HashMap<Integer, AtualizarTemperatureWidget>();
     
+   private static ConcreteAtualizarWidgets atualizarWidgets;
    
+   public static synchronized ConcreteAtualizarWidgets getInstance(){
+       
+       if(atualizarWidgets == null){
+           atualizarWidgets = new ConcreteAtualizarWidgets();
+       }
+       return atualizarWidgets;
+   }
+   
+   private ConcreteAtualizarWidgets() {
+    }
     
      //=====PollutionWidget=====
     

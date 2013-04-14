@@ -576,64 +576,325 @@ public class MonitorCidade extends javax.swing.JFrame implements AtualizaMonitor
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables
-
+    
+    
+    //POLLUTION MONITOR
+    
     @Override
     public void atualizaNivelPoluicao(Integer area, String levelPollution) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        if (area.equals(1)) {
+            if(levelPollution.equals("BOA")) {
+                //setar o icone pra boa
+                
+            }
+            else if(levelPollution.equals("REGULAR")) {
+                //setar icone pra regular
+            }
+            else if(levelPollution.equals("INADEQUADA")) {
+                //setar icone pra inadequada
+            }
+            else if(levelPollution.equals("MÁ")) {
+                //setar icone pra ma
+            }
+            else if(levelPollution.equals("PÉSSIMA")) {
+                //setar icone pra pessima
+            }
+            
+        }
+        else if(area.equals(2)) {
+            if(levelPollution.equals("BOA")) {
+                //setar o icone pra boa
+                
+            }
+            else if(levelPollution.equals("REGULAR")) {
+                //setar icone pra regular
+            }
+            else if(levelPollution.equals("INADEQUADA")) {
+                //setar icone pra inadequada
+            }
+            else if(levelPollution.equals("MÁ")) {
+                //setar icone pra ma
+            }
+            else if(levelPollution.equals("PÉSSIMA")) {
+                //setar icone pra pessima
+            }
+        }
+        else if(area.equals(3)) {
+            if(levelPollution.equals("BOA")) {
+                //setar o icone pra boa
+                
+            }
+            else if(levelPollution.equals("REGULAR")) {
+                //setar icone pra regular
+            }
+            else if(levelPollution.equals("INADEQUADA")) {
+                //setar icone pra inadequada
+            }
+            else if(levelPollution.equals("MÁ")) {
+                //setar icone pra ma
+            }
+            else if(levelPollution.equals("PÉSSIMA")) {
+                //setar icone pra pessima
+            }
+        }
+        else if(area.equals(4)) {
+            if(levelPollution.equals("BOA")) {
+                //setar o icone pra boa
+                
+            }
+            else if(levelPollution.equals("REGULAR")) {
+                //setar icone pra regular
+            }
+            else if(levelPollution.equals("INADEQUADA")) {
+                //setar icone pra inadequada
+            }
+            else if(levelPollution.equals("MÁ")) {
+                //setar icone pra ma
+            }
+            else if(levelPollution.equals("PÉSSIMA")) {
+                //setar icone pra pessima
+            }
+        }
     }
 
     @Override
     public void atualizaFluxoVeiculos(Integer area) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(area.equals(1)) {
+            //seta icone ligado
+        }
+        else if(area.equals(2)) {
+            //seta icone ligado
+        }
+        else if(area.equals(3)) {
+            //seta icone ligado
+        }
+        else if(area.equals(4)) {
+            //seta icone ligado
+        }
     }
 
     @Override
     public void atualizaProbabilidaDeChuva(Integer area) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(area.equals(1)) {
+            //seta icone ligado
+        }
+        else if(area.equals(2)) {
+            //seta icone ligado
+        }
+        else if(area.equals(3)) {
+            //seta icone ligado
+        }
+        else if(area.equals(4)) {
+            //seta icone ligado
+        }
     }
 
     @Override
-    public void atualizaChuvaAcida(Integer area, String localAcidRain) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void atualizaChuvaAcida(Integer area, String localAcidRain, String directionWind) {
+        if(area.equals(1)) {
+            if(localAcidRain.equals("AQUI")) {
+                //seta icone chuva acida na mesma area
+            }
+            else if(localAcidRain.equals("OUTRO")) {
+                //seta icone chuva acida que vai pra outra area e usar a directionWind pra informar pra que lado ela está indo
+            }
+        }
+        else if(area.equals(2)) {
+            if(localAcidRain.equals("AQUI")) {
+                //seta icone chuva acida na mesma area
+            }
+            else if(localAcidRain.equals("OUTRO")) {
+                //seta icone chuva acida que vai pra outra area e usar a directionWind pra informar pra que lado ela está indo
+            }
+        }
+        else if(area.equals(3)) {
+            if(localAcidRain.equals("AQUI")) {
+                //seta icone chuva acida na mesma area
+            }
+            else if(localAcidRain.equals("OUTRO")) {
+                //seta icone chuva acida que vai pra outra area e usar a directionWind pra informar pra que lado ela está indo
+            }
+        }
+        else if(area.equals(4)) {
+            if(localAcidRain.equals("AQUI")) {
+                //seta icone chuva acida na mesma area
+            }
+            else if(localAcidRain.equals("OUTRO")) {
+                //seta icone chuva acida que vai pra outra area e usar a directionWind pra informar pra que lado ela está indo
+            }
+        }
     }
 
     @Override
     public void atualizaQuantidadeRuido(Integer area, Integer noise) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(area.equals(1)) {
+            //verificar a hora atual e ver se esta em horario inadequado, se SIM, setar o icone
+        }
+        else if(area.equals(2)) {
+             //verificar a hora atual e ver se esta em horario inadequado, se SIM, setar o icone
+        }
+        else if(area.equals(3)) {
+             //verificar a hora atual e ver se esta em horario inadequado, se SIM, setar o icone
+        }
+        else if(area.equals(4)) {
+             //verificar a hora atual e ver se esta em horario inadequado, se SIM, setar o icone
+        }
     }
 
+    //TEMPERATURE MONITOR
+    
     @Override
     public void atualizaTemperatura(Integer area, float temperature) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(area.equals(1)) {
+            //seta icone ligado e mostrar o valor da temperatura
+        }
+        else if(area.equals(2)) {
+            //seta icone ligado e mostrar o valor da temperatura
+        }
+        else if(area.equals(3)) {
+            //seta icone ligado e mostrar o valor da temperatura
+        }
+        else if(area.equals(4)) {
+            //seta icone ligado e mostrar o valor da temperatura
+        }
     }
 
     @Override
     public void atualizaClimaBom(Integer area, boolean clima) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(area.equals(1)) {
+            //seta icone ligado
+        }
+        else if(area.equals(2)) {
+            //seta icone ligado
+        }
+        else if(area.equals(3)) {
+            //seta icone ligado
+        }
+        else if(area.equals(4)) {
+            //seta icone ligado
+        }
     }
 
     @Override
     public void atualizaIncidenciaDeIncendio(Integer area, boolean isFire) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(area.equals(1)) {
+            //seta icone ligado
+        }
+        else if(area.equals(2)) {
+            //seta icone ligado
+        }
+        else if(area.equals(3)) {
+            //seta icone ligado
+        }
+        else if(area.equals(4)) {
+            //seta icone ligado
+        }
     }
 
     @Override
     public void atualizaClimaQuenteESeco(Integer area, boolean hotDry) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(area.equals(1)) {
+            //seta icone ligado
+        }
+        else if(area.equals(2)) {
+            //seta icone ligado
+        }
+        else if(area.equals(3)) {
+            //seta icone ligado
+        }
+        else if(area.equals(4)) {
+            //seta icone ligado
+        }
+    }
+    
+    //DUMP MONITOR
+    
+    @Override
+    public void atualizaQuantidadeLixo(Integer area, String content) {
+            
+        if(area.equals(1)) {
+           if(content.equals("VAZIA")) {
+                //seta icone vazia
+               System.out.println("funcao funcionando"+area+content);
+            }
+            else if(content.equals("ENCHENDO")) {
+                //seta icone enchendo
+            }
+           else if(content.equals("CHEIA")) {
+                //seta icone cheia
+            }
+        }
+        else if(area.equals(2)) {
+            if(content.equals("VAZIA")) {
+                //seta icone vazia
+            }
+            else if(content.equals("ENCHENDO")) {
+                //seta icone enchendo
+            }
+           else if(content.equals("CHEIA")) {
+                //seta icone cheia
+            }
+        }
+        else if(area.equals(3)) {
+            if(content.equals("VAZIA")) {
+                //seta icone vazia
+            }
+            else if(content.equals("ENCHENDO")) {
+                //seta icone enchendo
+            }
+           else if(content.equals("CHEIA")) {
+                //seta icone cheia
+            }
+        }
+        else if(area.equals(4)) {
+            if(content.equals("VAZIA")) {
+                //seta icone vazia
+            }
+            else if(content.equals("ENCHENDO")) {
+                //seta icone enchendo
+            }
+           else if(content.equals("CHEIA")) {
+                //seta icone cheia
+            }
+        }
     }
 
     @Override
-    public void atualizaQuantidadeLixo(Integer area, String trash) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void atualizaAgenteProximo(Integer area, String status, String agentNearName) {
+        if(area.equals(1)) {
+            if(agentNearName.equals("LIMITE")) {
+                //seta icone limite e avisar que esta no limite
+            }
+            else if(agentNearName.equals("CHEIA")) {
+                //seta o icone de cheia e diz que chamou o agente
+            }
+        }
+        else if(area.equals(2)) {
+            if(agentNearName.equals("LIMITE")) {
+                //seta icone limite e avisar que esta no limite
+            }
+            else if(agentNearName.equals("CHEIA")) {
+                //seta o icone de cheia e diz que chamou o agente
+            }
+        }
+        else if(area.equals(3)) {
+            if(agentNearName.equals("LIMITE")) {
+                //seta icone limite e avisar que esta no limite
+            }
+            else if(agentNearName.equals("CHEIA")) {
+                //seta o icone de cheia e diz que chamou o agente
+            }
+        }
+        else if(area.equals(4)) {
+            if(agentNearName.equals("LIMITE")) {
+                //seta icone limite e avisar que esta no limite
+            }
+            else if(agentNearName.equals("CHEIA")) {
+                //seta o icone de cheia e diz que chamou o agente
+            }
+        }
     }
-
-    @Override
-    public void atualizaAgenteProximo(Integer area, String aegntNearName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     
-
-    
-
+    //fim
 }

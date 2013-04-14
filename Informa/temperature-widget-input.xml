@@ -5,6 +5,6 @@
 		<Attribute name="humidity" type="int"/>
 		<Attribute name="windSpeed" type="int"/>
 		<Attribute name="isFire" type="boolean"/>
-		<Attribute name="area" type="int" />
+		<Attribute name="area" type="int"/>
 	</Attributes>
 </Widget>

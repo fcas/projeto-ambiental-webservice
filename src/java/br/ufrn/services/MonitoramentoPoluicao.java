@@ -4,6 +4,7 @@ import br.ufrn.GUI.MonitorCidade;
 import br.ufrn.controlers.AtualizarPollutionWidget;
 import context.arch.enactor.Enactor;
 import context.arch.enactor.EnactorXmlParser;
+import context.arch.storage.Attributes;
 import context.arch.widget.Widget;
 import context.arch.widget.WidgetXmlParser;
 
@@ -20,24 +21,29 @@ public class MonitoramentoPoluicao implements AtualizarPollutionWidget{
 	
 
 	public MonitoramentoPoluicao(Integer area, MonitorCidade monitor) {
-		
+//		
 		//IN Widgets
 		pollutionIN = WidgetXmlParser.createWidget("Informa/pollution-widget-input.xml");
-		pollutionIN.updateData("area", area);
-		
+                pollutionIN.updateData("area", area);
+                pollutionIN.setId("area "+area);
+                
 		//OUT Widgets and Service
 		informaOUT = WidgetXmlParser.createWidget("Informa/informa-widget-output.xml");
+                informaOUT.setId("area "+area);
+                            
 		informaService = new InformaService(informaOUT, monitor);
 		informaOUT.addService(informaService);
 		
 		//Enactors
 		enactorPollution = EnactorXmlParser.createEnactor("Informa/pollution-enactor.xml");
+                enactorPollution.setId("area "+area);
 		
 	}
 
     @Override
     public void atualizarIndicePoluicao(Integer area, int indexPolluition) {
         pollutionIN.updateData("indexPollution", indexPolluition);
+        System.out.println("atualizado indice de poluicao "+area+indexPolluition);
     }
 
     @Override
