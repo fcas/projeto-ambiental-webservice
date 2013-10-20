@@ -1,1 +1,2 @@
-web:    java $JAVA_OPTS -jar target/dependency/jetty-runner.jar --port $PORT dist/*.war
+web:    java $JAVA_OPTS -jar target/dependency/jetty-runner.jar --port $PORT dist/ProjetoAmbientalWebService.war 
+
