@@ -12,7 +12,7 @@ import javax.ws.rs.PathParam;
  *
  * @author Jorge
  */
-public interface AtualizarWidgetsRMI extends Remote{
+public interface AtualizarWidgetsRMI extends Remote {
 
     //=====PollutionWidget=====
     public void atualizarIndicePoluicao(Integer area, Integer indexPolluition) throws RemoteException;
@@ -22,7 +22,7 @@ public interface AtualizarWidgetsRMI extends Remote{
     //este metodo deve atualizar o PollutionWidget e o TemperatureWidget
     public void atualizarVelociadeDoVento(Integer area, Integer windSpeed) throws RemoteException;
 
-    public void atualizardirecaoDoVento(Integer area, String directionWind)throws RemoteException;
+    public void atualizardirecaoDoVento(Integer area, String directionWind) throws RemoteException;
 
     public void atualizarProbalidadeChuva(Integer area, Integer willRain) throws RemoteException;
 
@@ -33,13 +33,12 @@ public interface AtualizarWidgetsRMI extends Remote{
 
     public void atualizarHumidade(Integer area, Integer humidity) throws RemoteException;
 
-    public void atualizarIncidenciaDeIncendio(Integer area, Integer isFire)throws RemoteException;
+    public void atualizarIncidenciaDeIncendio(Integer area, Integer isFire) throws RemoteException;
 
     //=====DumpWidget===
-    public void atualizarQuantidadeLixo(Integer area, Integer trash)throws RemoteException;
+    public void atualizarQuantidadeLixo(Integer area, Integer trash) throws RemoteException;
 
     public void atualizarAgenteProximo(Integer area, String agentNearName) throws RemoteException;
-    
-    public void atualizaDistanciaAgente(Integer area, Integer agentDistance) throws RemoteException;
 
+    public void atualizaDistanciaAgente(Integer area, Integer agentDistance) throws RemoteException;
 }
