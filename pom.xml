@@ -3,42 +3,102 @@
   <groupId>com.mycompany.app</groupId>
   <artifactId>ProjetoAmbientalWebService</artifactId>
   <version>1</version>
-<dependencies>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-servlet</artifactId>
-            <version>7.6.0.v20120127</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-        </dependency>
-    </dependencies>
-<build>
-    <plugins>    
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <version>2.3</version>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals><goal>copy</goal></goals>
-                    <configuration>
-                        <artifactItems>
-                            <artifactItem>
-                                <groupId>com.github.jsimone</groupId>
-                                <artifactId>webapp-runner</artifactId>
-                                <version>7.0.40.0</version>
-                                <destFileName>webapp-runner.jar</destFileName>
-                            </artifactItem>
-                        </artifactItems>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.api.version>3.0.4</maven.api.version>
+    <lombok.version>1.12.2</lombok.version>
+</properties>
 
+<dependencies>
+	<dependency>
+	    <groupId>javax</groupId>
+	    <artifactId>javaee-web-api</artifactId>
+	    <version>6.0</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+	<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-core</artifactId>
+		<version>1.13</version>
+	</dependency>
+	<dependency>
+		<groupId>org.glassfish.jersey.core</groupId>
+		<artifactId>jersey-client</artifactId>
+		<version>2.4.1</version>
+	</dependency>
+	<dependency>
+                <groupId>context.tool.kit</groupId>
+                <artifactId>contexttoolkit</artifactId>
+                <version>1</version>
+        </dependency>
+	<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-bundle</artifactId>
+		<version>1.10-b01</version>
+	</dependency>
+            
+                
+</dependencies>
+
+<build>
+	<sourceDirectory>src</sourceDirectory>
+	<testSourceDirectory>test</testSourceDirectory>
+	<outputDirectory>target</outputDirectory>
+	    <plugins>    
+	        <plugin>
+		    <groupId>org.eluder.coveralls</groupId>
+		    <artifactId>coveralls-maven-plugin</artifactId>
+		    <version>2.0.1</version>
+		    <configuration>
+		        <repoToken>x1WiwNAftxUWLrLC0EUB85ljHD42ucWWZ</repoToken>
+		    </configuration>
+		</plugin>
+		<plugin>
+		    <groupId>org.codehaus.mojo</groupId>
+		    <artifactId>cobertura-maven-plugin</artifactId>
+		    <version>2.5.2</version>
+		    <configuration>
+		        <format>xml</format>
+		        <maxmem>256m</maxmem>
+		        <!-- aggregated reports for multi-module projects -->
+		        <aggregate>true</aggregate>
+		    </configuration>
+		</plugin>
+		<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>default-jar</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                    <configuration>
+                        <excludes>
+                            <exclude>target/*.jar</exclude>
+                        </excludes>
+                    </configuration>
+                        </execution>
+                            </executions>
+                </plugin>
+		<plugin>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        <version>3.0</version>
+		        <configuration>
+		            <source>1.7</source>
+		            <target>1.7</target>
+				<excludes>
+                        	    <exclude>target/*.jar</exclude>
+	                        </excludes>
+		        </configuration>
+	        </plugin>
+</plugins>
+</build>
 </project>
