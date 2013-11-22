@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="1.0" lines-covered="0" lines-valid="51" branches-covered="0" branches-valid="0" complexity="0.0" version="1.9.4.1" timestamp="1385074212565">
+<coverage line-rate="0.0" branch-rate="1.0" lines-covered="0" lines-valid="51" branches-covered="0" branches-valid="0" complexity="1.1538461538461537" version="1.9.4.1" timestamp="1385079758310">
 	<sources>
 		<source>--source</source>
-		<source>/home/felipe/NetBeansProjects/ProjetoAmbientalWebService/src</source>
+		<source>/home/felipe/NetBeansProjects/ProjetoAmbientalWebService/src/java</source>
 	</sources>
 	<packages>
-		<package name="br.ufrn.WebService" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+		<package name="br.ufrn.WebService" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="br.ufrn.WebService.WebServiceMonitoramentoAmbiental" filename="br/ufrn/WebService/WebServiceMonitoramentoAmbiental.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+				<class name="br.ufrn.WebService.WebServiceMonitoramentoAmbiental" filename="br/ufrn/WebService/WebServiceMonitoramentoAmbiental.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
 							<lines>
@@ -147,15 +147,15 @@
 				</class>
 			</classes>
 		</package>
-		<package name="br.ufrn.controlers" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+		<package name="br.ufrn.controlers" line-rate="0.0" branch-rate="1.0" complexity="1.3076923076923077">
 			<classes>
-				<class name="br.ufrn.controlers.AtualizarWidgetsRMI" filename="br/ufrn/controlers/AtualizarWidgetsRMI.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+				<class name="br.ufrn.controlers.AtualizarWidgetsRMI" filename="br/ufrn/controlers/AtualizarWidgetsRMI.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
 					</lines>
 				</class>
-				<class name="br.ufrn.controlers.Reference" filename="br/ufrn/controlers/Reference.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+				<class name="br.ufrn.controlers.Reference" filename="br/ufrn/controlers/Reference.java" line-rate="0.0" branch-rate="1.0" complexity="5.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
 							<lines>

@@ -26,10 +26,8 @@
 </dependencies>
 
 <build>
-	<sourceDirectory>src</sourceDirectory>
+	<sourceDirectory>src/java</sourceDirectory>
 	<testSourceDirectory>test</testSourceDirectory>
-	<outputDirectory>target</outputDirectory>
-	<testOutputDirectory>nbbuild/test/classes</testOutputDirectory>
 	    <plugins>    
 
 		<plugin>
