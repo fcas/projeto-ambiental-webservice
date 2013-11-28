@@ -42,6 +42,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarindicePoluicao(@PathParam("area") int area, String indexPolluition) throws RemoteException {
         try {
             atualizarWidgets.atualizarIndicePoluicao(area, Integer.parseInt(indexPolluition));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -54,6 +56,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarFluxoDeVeiculos(@PathParam("area") int area, String vehicleFlow) throws RemoteException {
         try {
             atualizarWidgets.atualizarFluxoDeVeiculos(area, Integer.parseInt(vehicleFlow));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -67,6 +71,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarVelociadeDoVento(@PathParam("area") int area, String windSpeed) throws RemoteException {
         try {
             atualizarWidgets.atualizarVelociadeDoVento(area, Integer.parseInt(windSpeed));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -79,6 +85,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizardirecaoDoVento(@PathParam("area") int area, String directionWind) throws RemoteException {
         try {
             atualizarWidgets.atualizardirecaoDoVento(area, directionWind);
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -91,6 +99,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarProbalidadeChuva(@PathParam("area") int area, String willRain) throws RemoteException {
         try {
             atualizarWidgets.atualizarProbalidadeChuva(area, Integer.parseInt(willRain));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -103,6 +113,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarQuantidadeRuido(@PathParam("area") int area, String noise) throws RemoteException {
         try {
             atualizarWidgets.atualizarQuantidadeRuido(area, Integer.parseInt(noise));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -116,8 +128,10 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarTemeperatura(@PathParam("area") int area, String temperature) throws RemoteException {
         try {
             atualizarWidgets.atualizarTemeperatura(area, Integer.parseInt(temperature));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
-            System.out.println("A interface não pode ser reconhecida...");
+            System.out.println(" interface não pode ser reconhecida...");
         }
         System.out.println(area + " temperatura " + temperature);
     }
@@ -128,6 +142,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarHumidade(@PathParam("area") int area, String humidity) throws RemoteException {
         try {
             atualizarWidgets.atualizarHumidade(area, Integer.parseInt(humidity));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -140,6 +156,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarIncidenciaDeIncendio(@PathParam("area") int area, String isFire) throws RemoteException {
         try {
             atualizarWidgets.atualizarIncidenciaDeIncendio(area, Integer.parseInt(isFire));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -153,6 +171,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarQuantidadeLixo(@PathParam("area") int area, String trash) throws RemoteException {
         try {
             atualizarWidgets.atualizarQuantidadeLixo(area, Integer.parseInt(trash));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -165,6 +185,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizarAgenteProximo(@PathParam("area") int area, String agentNearName) throws RemoteException {
         try {
             atualizarWidgets.atualizarAgenteProximo(area, agentNearName);
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
@@ -177,6 +199,8 @@ public class WebServiceMonitoramentoAmbiental {
     public void atualizaDistanciaAgente(@PathParam("area") int area, String agentDistance) throws RemoteException {
         try {
             atualizarWidgets.atualizaDistanciaAgente(area, Integer.parseInt(agentDistance));
+        }catch(java.rmi.ConnectException a){
+            System.out.println(" conexão recusada...");
         } catch (NullPointerException e) {
             System.out.println(" interface não pode ser reconhecida...");
         }
