@@ -40,7 +40,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_indice_poluicao/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarindicePoluicao(@PathParam("area") int area, String indexPolluition) throws RemoteException {
-        atualizarWidgets.atualizarIndicePoluicao(area, Integer.parseInt(indexPolluition));
+        try {
+            atualizarWidgets.atualizarIndicePoluicao(area, Integer.parseInt(indexPolluition));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + " indice poluição " + indexPolluition);
     }
 
@@ -48,7 +52,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_fluxo_veiculos/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarFluxoDeVeiculos(@PathParam("area") int area, String vehicleFlow) throws RemoteException {
-        atualizarWidgets.atualizarFluxoDeVeiculos(area, Integer.parseInt(vehicleFlow));
+        try {
+            atualizarWidgets.atualizarFluxoDeVeiculos(area, Integer.parseInt(vehicleFlow));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + " fluxo de veiculos  " + vehicleFlow);
     }
 
@@ -57,7 +65,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_velocidade_vento/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarVelociadeDoVento(@PathParam("area") int area, String windSpeed) throws RemoteException {
-        atualizarWidgets.atualizarVelociadeDoVento(area, Integer.parseInt(windSpeed));
+        try {
+            atualizarWidgets.atualizarVelociadeDoVento(area, Integer.parseInt(windSpeed));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + "  velocidade do vento " + windSpeed);
     }
 
@@ -65,7 +77,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_direcao_vento/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizardirecaoDoVento(@PathParam("area") int area, String directionWind) throws RemoteException {
-        atualizarWidgets.atualizardirecaoDoVento(area, directionWind);
+        try {
+            atualizarWidgets.atualizardirecaoDoVento(area, directionWind);
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + "  direção do vento " + directionWind);
     }
 
@@ -73,7 +89,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_probabilidade_chuva/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarProbalidadeChuva(@PathParam("area") int area, String willRain) throws RemoteException {
-        atualizarWidgets.atualizarProbalidadeChuva(area, Integer.parseInt(willRain));
+        try {
+            atualizarWidgets.atualizarProbalidadeChuva(area, Integer.parseInt(willRain));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + " vai chover " + willRain);
     }
 
@@ -81,7 +101,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_quantidade_ruido/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarQuantidadeRuido(@PathParam("area") int area, String noise) throws RemoteException {
-        atualizarWidgets.atualizarQuantidadeRuido(area, Integer.parseInt(noise));
+        try {
+            atualizarWidgets.atualizarQuantidadeRuido(area, Integer.parseInt(noise));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + " quantidade de ruido  " + noise);
     }
 
@@ -90,7 +114,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_temperatura/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarTemeperatura(@PathParam("area") int area, String temperature) throws RemoteException {
-        atualizarWidgets.atualizarTemeperatura(area, Integer.parseInt(temperature));
+        try {
+            atualizarWidgets.atualizarTemeperatura(area, Integer.parseInt(temperature));
+        } catch (NullPointerException e) {
+            System.out.println("A interface não pode ser reconhecida...");
+        }
         System.out.println(area + " temperatura " + temperature);
     }
 
@@ -98,7 +126,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_humidade/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarHumidade(@PathParam("area") int area, String humidity) throws RemoteException {
-        atualizarWidgets.atualizarHumidade(area, Integer.parseInt(humidity));
+        try {
+            atualizarWidgets.atualizarHumidade(area, Integer.parseInt(humidity));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + " humidade do ar " + humidity);
     }
 
@@ -106,7 +138,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_incidencia_incendio/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarIncidenciaDeIncendio(@PathParam("area") int area, String isFire) throws RemoteException {
-        atualizarWidgets.atualizarIncidenciaDeIncendio(area, Integer.parseInt(isFire));
+        try {
+            atualizarWidgets.atualizarIncidenciaDeIncendio(area, Integer.parseInt(isFire));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + " fogo " + isFire);
     }
 
@@ -115,7 +151,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_quantidade_lixo/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarQuantidadeLixo(@PathParam("area") int area, String trash) throws RemoteException {
-        atualizarWidgets.atualizarQuantidadeLixo(area, Integer.parseInt(trash));
+        try {
+            atualizarWidgets.atualizarQuantidadeLixo(area, Integer.parseInt(trash));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + " lixo " + trash);
     }
 
@@ -123,7 +163,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_agente_proximo/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizarAgenteProximo(@PathParam("area") int area, String agentNearName) throws RemoteException {
-        atualizarWidgets.atualizarAgenteProximo(area, agentNearName);
+        try {
+            atualizarWidgets.atualizarAgenteProximo(area, agentNearName);
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + "  agente proximo " + agentNearName);
     }
 
@@ -131,7 +175,11 @@ public class WebServiceMonitoramentoAmbiental {
     @Path("/atualizar_distancia_agente/{area}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void atualizaDistanciaAgente(@PathParam("area") int area, String agentDistance) throws RemoteException {
-        atualizarWidgets.atualizaDistanciaAgente(area, Integer.parseInt(agentDistance));
+        try {
+            atualizarWidgets.atualizaDistanciaAgente(area, Integer.parseInt(agentDistance));
+        } catch (NullPointerException e) {
+            System.out.println(" interface não pode ser reconhecida...");
+        }
         System.out.println(area + "  distancia proximo " + agentDistance);
     }
 }
