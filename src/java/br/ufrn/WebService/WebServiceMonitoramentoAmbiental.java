@@ -33,9 +33,9 @@ public class WebServiceMonitoramentoAmbiental {
     public WebServiceMonitoramentoAmbiental() {
 //        this.widget = new InstanciaWidget();
 //        monitorCidade.setVisible(true);
-            atualizarWidgets = new Reference().getReference("rmi://localhost:1029/Monitoramento");
         
-        
+          //atualizarWidgets = new Reference().getReference("rmi://localhost:1029/Monitoramento");
+
     }
 
     //=====PollutionWidget=====
@@ -46,7 +46,8 @@ public class WebServiceMonitoramentoAmbiental {
         try {
             atualizarWidgets.atualizarIndicePoluicao(area, Integer.parseInt(indexPolluition));
         } catch (NullPointerException e) {
-            System.out.println(" interface não pode ser reconhecida...");
+            System.out.println("interface não acessada...");
+            //System.out.println(" interface não pode ser reconhecida...");
         } catch (java.rmi.ConnectException a) {
             System.out.println(" conexão recusada...");
         }
